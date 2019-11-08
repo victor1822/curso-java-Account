@@ -40,9 +40,11 @@ public class Program {
 		//Aqui foi feito um teste da sobreposicao do metodo original da classe base (Account), chamado withdraw, onde em cada classe base, modifica-se a taxa de saque de um valor da conta 
 		//O teste simplesmente usa as três instancias da classe inicializadas com 1000 e com uma operacao de saque no valor de 200 reais. dependendo do tipo de instancia de cada objeto,
 		//se tem um valor de taxa diferente, portanto, o valor do saldo no final tambem e diferenciado
-		Account acc_1 = new Account(2001,"Alex",1000.0);
-		acc_1.withdraw(200.0);
-		System.out.println("Account: "+acc_1.getBalance());
+		
+		//Como Account foi definida como classe abstrata, ela não pode ser instanciada
+		//Account acc_1 = new Account(2001,"Alex",1000.0);
+		//acc_1.withdraw(200.0);
+		//System.out.println("Account: "+acc_1.getBalance());
 		Account acc_2 = new SavingsAccount(2002,"Amanda",1000.0,0.01);
 		acc_2.withdraw(200.0);
 		System.out.println("SavingsAccount: "+acc_2.getBalance());
